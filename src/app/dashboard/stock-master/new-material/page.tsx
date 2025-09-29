@@ -305,7 +305,16 @@ export default function NewMaterialPage() {
                   {editingMaterialId ? 'Update Material' : 'Save Material'}
                 </Button>
                  {editingMaterialId && (
-                    <Button variant="ghost" onClick={() => { setEditingMaterialId(null); form.reset({id: '', name: '', permissions: []})}}>Cancel</Button>
+                    // <Button variant="ghost" onClick={() => { setEditingMaterialId(null); form.reset({id: '', name: '', permissions: []})}}>Cancel</Button>
+                  <Button
+                    variant="ghost"
+                    onClick={() => {
+                      setEditingMaterialId(null);
+                      form.reset({ id: '', materialName: '', category: '', unit: '', supplier: '', gstRate: '' });
+                    }}
+                  >
+                    Cancel
+                  </Button>
                 )}
               </form>
             </Form>
