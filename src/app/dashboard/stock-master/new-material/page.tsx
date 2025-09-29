@@ -263,7 +263,7 @@ export default function NewMaterialPage() {
                             <FormControl>
                               <SelectTrigger>
                                 <SelectValue placeholder="Select a supplier" />
-                              </Trigger>
+                              </SelectTrigger>
                             </FormControl>
                             <SelectContent>
                               {suppliers.map((sup, index) => (
